@@ -1,0 +1,32 @@
+@import 'src/styles/mixins';
+@import 'src/styles/variables';
+
+.dialog {
+  background: $form-bg;
+  padding: 20px 50px;
+  border-radius: 20px;
+  min-width: 500px;
+}
+
+.dialog__title {
+  text-align: center;
+  margin-bottom: 15px;
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.dialog__block {
+  background: inherit;
+  @include flexCenter(true);
+  gap: 20px;
+}
+
+.dialog__options {
+  display: flex;
+  padding: 20px 0 10px;
+  gap: 20px;
+}
+
+.dialog__block_description {
+  width: 100%;
+}

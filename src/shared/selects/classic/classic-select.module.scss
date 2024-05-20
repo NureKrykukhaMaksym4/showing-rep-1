@@ -1,0 +1,16 @@
+.select {
+    width: 100%;
+    z-index: 10000;
+    position: relative;
+}
+
+.select__trigger {
+    width: 100%;
+    color: #e5edfd7b;
+    z-index: 10000;
+    position: relative;
+    span {
+        line-height: 100%;
+        color: inherit;
+    }
+}

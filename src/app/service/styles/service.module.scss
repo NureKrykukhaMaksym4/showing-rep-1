@@ -1,0 +1,101 @@
+@import 'src/styles/mixins';
+@import 'src/styles/variables';
+
+.service {
+    @include flexCenter();
+    align-items: flex-start;
+    width: 100%;
+    min-height: 100vh;
+    background: $main-bg;
+}
+
+
+.service__inner {
+    @include flexCenter();
+    align-items: flex-start;
+    width: 100%;
+    max-width: 70%;
+    gap: 75px;
+    padding: 50px 0;
+    background: inherit;
+}
+
+.service__left_block {
+    @include flexCenter(true);
+    align-items: flex-start;
+    max-width: 350px;
+    min-width: 250px;
+    background: inherit;
+}
+
+.service__avatar {
+    @include flexCenter();
+    width: 100%;
+    margin-bottom: 10px;
+
+    svg, img {
+        width: 200px;
+    }
+}
+
+.service__username {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.service__email {
+    font-size: 18px;
+}
+
+.service__options {
+    @include flexCenter(true);
+    margin-top: 20px;
+    width: 100%;
+    gap: 10px;
+    background: inherit;
+}
+
+.service__right_block {
+}
+
+.service__info_block {
+    display: flex;
+    flex-direction: column;
+}
+
+.service__info_item {
+    font-size: 20px;
+    font-weight: 600;
+
+    span {
+        font-size: 16px;
+        font-weight: 400;
+    }
+}
+
+.service__info_blocks_wrapper {
+    display: flex;
+    gap: 50px;
+    margin-bottom: 15px;
+}
+
+.service__info_noClub {
+    color: #e2106e;
+}
+.service__info_description_title {
+    font-size: 22px;
+    margin: 20px 0 10px;
+    font-weight: 500;
+}
+
+.service__info_description {
+    font-size: 18px;
+}
+
+.service__title {
+    width: 100%;
+    text-align: center;
+    font-size: 26px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}

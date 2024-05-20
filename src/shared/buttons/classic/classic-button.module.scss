@@ -1,0 +1,13 @@
+@import 'src/shared/buttons/button.module';
+
+.button {
+    @extend %classicButton;
+}
+
+.danger {
+    background: #b51034;
+
+    &:hover {
+        background: #e91a47;
+    }
+}

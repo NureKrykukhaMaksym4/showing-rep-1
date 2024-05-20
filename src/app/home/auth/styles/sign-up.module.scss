@@ -1,0 +1,19 @@
+@import "src/styles/mixins";
+@import "src/styles/variables";
+
+.signUp__block {
+    @include flexCenter();
+    background: inherit;
+    gap: 20px;
+}
+
+.signUp__gender {
+    margin: 15px 0;
+}
+
+.signUp__gender__title {
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+

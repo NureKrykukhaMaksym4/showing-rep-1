@@ -1,0 +1,14 @@
+@import 'src/shared/buttons/button.module';
+.button {
+    @extend %classicButton;
+    background: #c40937;
+
+
+    &:hover {
+        background: #940b35;
+    }
+
+    &:active {
+        background: #7c0636;
+    }
+}

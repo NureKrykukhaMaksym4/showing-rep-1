@@ -1,0 +1,158 @@
+@import "src/styles/mixins";
+.header {
+    padding: 0 30px;
+    @include flexCenter();
+    width: 100%;
+    background: #1c262a;
+    height: 100px;
+    position: relative;
+    z-index: 0;
+}
+
+.header__logo {
+    background: inherit;
+
+}
+
+.header__navbar {
+    @include flexCenter();
+    padding: 0 30px;
+    width: 100%;
+    height: 100%;
+}
+
+.header__navbar_item {
+    @include flexCenter();
+    list-style: none;
+    font-size: 22px;
+    text-transform: uppercase;
+    font-weight: 700;
+    cursor: pointer;
+    user-select: none;
+    transition: all 0.1s;
+    font-family: Cantarell, sans-serif;
+    height: 100%;
+    &:hover {
+        background: #314347;
+    }
+
+    a {
+        @include flexCenter();
+        padding: 0 30px;
+        height: 100%;
+    }
+}
+
+.header__features {
+    @include flexCenter();
+    gap: 10px;
+    position: relative;
+}
+
+.header__features_letters {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+
+    transition: all 0.1s;
+    padding: 10px;
+
+    &:hover {
+        background: #314347;
+    }
+}
+
+.header__features_chats {
+    @include flexCenter();
+    width: 65px;
+    height: 65px;
+    position: relative;
+    transition: all 0.1s;
+    padding: 10px;
+    border-radius: 50%;
+    &:hover {
+        background: #314347;
+    }
+}
+
+.header__features_letters_new {
+    @include flexCenter();
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    right: 5px;
+    top: 10px;
+    font-weight: 700;
+    background: red;
+}
+
+.header__profile_trigger {
+    width: 40px;
+    height: 40px;
+
+    &:hover {
+
+    }
+}
+
+.header__profile_wrapper {
+    @include flexCenter();
+    margin-left: 35px;
+    position: relative;
+    z-index: 9999999;
+    width: 60px;
+    height: 60px;
+}
+
+.header__mailbox_wrapper {
+    position: absolute;
+    bottom: -410px;
+    right: 0;
+    z-index: 999;
+
+    &::before {
+        position: absolute;
+        content: '';
+        background: #2f434b;
+        height: 20px;
+        width: 20px;
+        top: -10px;
+        right: 22px;
+        transform: rotate(45deg);
+    }
+}
+
+.header__mailbox_close {
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    z-index: 100;
+    @include flexCenter();
+    border-radius: 50%;
+    padding: 15px;
+    transform: rotate(45deg);
+    transition: all 0.2s;
+    &:hover {
+        background: rgb(103, 76, 90);
+    }
+
+    &::before {
+        width: 20px;
+        height: 3px;
+    }
+
+    &::after {
+        height: 20px;
+        width: 3px;
+    }
+
+    &::after, &::before {
+        content: '';
+        position: absolute;
+        background: #f51646;
+
+    }
+}

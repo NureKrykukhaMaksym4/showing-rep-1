@@ -1,0 +1,33 @@
+.block {
+  outline: 1px solid white;
+  width: inherit;
+  padding-left: 10px;
+}
+.order {
+  width: inherit;
+  display: flex;
+  margin-bottom: 20px;
+  gap:50px;
+
+  &__rightBlock{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    &__Up{
+      display: flex;
+      gap: 10px;
+    }
+    &__Down{
+      display: flex;
+      gap:10px;
+    }
+  }
+}
+
+.element{
+  margin: 20px 0 20px 0;
+  font-size: 22px;
+  text-transform: uppercase;
+  font-weight: 700;
+}

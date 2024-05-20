@@ -1,0 +1,31 @@
+@import "src/styles/mixins";
+
+.radioGroup__wrapper {
+
+}
+
+.radioGroup {
+    @include flexCenter();
+    gap: 20px;
+}
+
+.radio {
+    @include flexCenter();
+    gap: 5px;
+}
+
+.radio__btn {
+    button {
+        @include flexCenter();
+        border: 2px solid #8c949f;
+        span {
+            min-width: 5px;
+            min-height: 5px;
+        }
+        box-shadow: none;
+
+        &[data-state='checked'] {
+            border: 2px solid #03b542;
+        }
+    }
+}

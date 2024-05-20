@@ -1,0 +1,95 @@
+@import "src/styles/mixins";
+
+.calendar {
+    background: #20242b;
+    color: #fff;
+    border-radius: 10px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    height: 350px;
+    :global {
+        .react-calendar__tile {
+            color: #fff;
+            &:hover {
+                background: #4e5155;
+            }
+        }
+        .react-calendar__tile--active:enabled:hover,
+        .react-calendar__tile--active:enabled:focus {
+            background: #5a5b5c;
+        }
+        .react-calendar__tile--active,
+        .react-calendar__tile--hasActive {
+            background: #434951;
+        }
+        .react-calendar__month-view__days__day--weekend {
+            color: #d10
+        }
+        .react-calendar__month-view__days__day--neighboringMonth {
+            color: #646363
+        }
+
+        .react-calendar__navigation {
+            button {
+                &:hover {
+                    background: #4e5155;
+                }
+
+                &:active {
+                    background: #5a5b5c;
+                }
+
+                &:disabled {
+                    background: #5a5b5c;
+                    color: #d0cfcf;
+                }
+
+                &:focus {
+                    background: #5a5b5c;
+                }
+            }
+        }
+
+        .react-calendar__tile--now {
+            background: #314856;
+        }
+    }
+}
+
+.pos__bottom {
+    bottom: -360px;
+}
+
+.pos__top {
+    bottom: 50px;
+}
+
+.calendar__wrapper {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    position: relative;
+    border: 2px solid #506266;
+    border-radius: 10px;
+
+    &::before {
+        content: '';
+        border-bottom: 2px solid #fff;
+        border-right: 2px solid #fff;
+        width: 8px;
+        height: 8px;
+        position: absolute;
+        right: 15px;
+        bottom: 20px;
+        transform: rotate(45deg);
+    }
+}
+
+.calendar__title {
+    width: 100%;
+    text-align: left;
+    padding: 10px 15px;
+
+    cursor: pointer;
+}

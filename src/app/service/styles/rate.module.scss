@@ -1,0 +1,36 @@
+@import 'src/styles/mixins';
+@import 'src/styles/variables';
+
+.section__content {
+    background: $form-bg;
+    padding: 40px 80px;
+    width: fit-content;
+    min-width: 500px;
+    border-radius: 20px;
+    margin: 100px 0 150px;
+}
+
+.section__content__title {
+    text-align: center;
+    font-size: 32px;
+    font-weight: 600;
+}
+
+.form {
+    @include flexCenter(true);
+    background: inherit;
+    gap: 15px;
+}
+
+.form__block {
+    @include flexCenter(true);
+    width: 100%;
+    background: inherit;
+    gap: 5px;
+}
+
+.form__block_error {
+    width: 100%;
+    font-size: 14px;
+    padding-left: 10px;
+}
